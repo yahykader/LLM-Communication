@@ -1,3 +1,4 @@
+/*
 package com.example.Test_AI_LLM.controller;
 
 import org.springframework.ai.image.ImageOptions;
@@ -31,4 +32,4 @@ public class AiAgentGenerationImageController {
         String url = openAiImageModel.call(imagePrompt).getResult().getOutput().getUrl();
         return url;
     }
-}
+}*/

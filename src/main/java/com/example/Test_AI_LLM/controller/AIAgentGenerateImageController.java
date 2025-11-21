@@ -1,3 +1,4 @@
+/*
 package com.example.Test_AI_LLM.controller;
 
 import lombok.Builder;
@@ -33,12 +34,14 @@ public class AIAgentGenerateImageController {
 
     private final OpenAiImageModel openAiImageModel;
 
-    /**
+    */
+/**
      * Génère une image basée sur le prompt fourni
      *
      * @param request l'objet contenant les paramètres de génération
      * @return Mono contenant l'URL de l'image générée
-     */
+     *//*
+
     @PostMapping(value = "/generate", produces = MediaType.APPLICATION_JSON_VALUE)
     public Mono<ResponseEntity<ImageGenerationResponse>> generateImage(
             @RequestBody @Validated ImageGenerationRequest request) {
@@ -79,9 +82,11 @@ public class AIAgentGenerateImageController {
                 });
     }
 
-    /**
+    */
+/**
      * Version simplifiée avec GET (pour compatibilité ascendante)
-     */
+     *//*
+
     @GetMapping(value = "/generate", produces = MediaType.TEXT_PLAIN_VALUE)
     public Mono<String> generateImageSimple(
             @RequestParam @NotBlank @Size(min = 3, max = 4000) String query,
@@ -96,9 +101,11 @@ public class AIAgentGenerateImageController {
                 .map(response -> response.getBody().getImageUrl());
     }
 
-    /**
+    */
+/**
      * Extrait l'URL de l'image de la réponse
-     */
+     *//*
+
     private Mono<String> extractImageUrl(ImageResponse response) {
         return Mono.justOrEmpty(response.getResult())
                 .map(result -> result.getOutput().getUrl())
@@ -184,4 +191,4 @@ public class AIAgentGenerateImageController {
         private String errorCode;
         private String message;
     }
-}
+}*/
